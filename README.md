@@ -1,6 +1,6 @@
 # Yandex Metrika
-[![npm](https://img.shields.io/npm/dt/@nuxtjs/yandex-metrika.svg?style=flat-square)](https://www.npmjs.com/package/@nuxtjs/yandex-metrika)
-[![npm (scoped with tag)](https://img.shields.io/npm/v/@nuxtjs/yandex-metrika/latest.svg?style=flat-square)](https://www.npmjs.com/package/@nuxtjs/yandex-metrika)
+[![npm](https://img.shields.io/npm/dt/@ruvents/yandex-metrika.svg?style=flat-square)](https://www.npmjs.com/package/@ruvents/yandex-metrika)
+[![npm (scoped with tag)](https://img.shields.io/npm/v/@ruvents/yandex-metrika/latest.svg?style=flat-square)](https://www.npmjs.com/package/@ruvents/yandex-metrika)
 
 > Add Yandex Metrika to your nuxt.js application.
 
@@ -11,12 +11,12 @@ You can set environment variable `NODE_ENV` to `production` for testing in dev m
 
 ## Setup
 
-- Add `@nuxtjs/yandex-metrika` dependency using yarn or npm to your project
-- Add `@nuxtjs/yandex-metrika` to `modules` section of `nuxt.config.js`
+- Add `@ruvents/yandex-metrika` dependency using yarn or npm to your project
+- Add `@ruvents/yandex-metrika` to `modules` section of `nuxt.config.js`
 
 ```js
 {
-  modules: ['@nuxtjs/yandex-metrika'],
+  modules: ['@ruvents/yandex-metrika'],
 }
 ```
 
@@ -28,7 +28,7 @@ You can pass options directly in module declaration:
 {
   modules: [
     [
-      '@nuxtjs/yandex-metrika',
+      '@ruvents/yandex-metrika',
       {
         id: 'XXXXXX',
         webvisor: true,
@@ -46,7 +46,7 @@ Or you can specify `yandexMetrika` key:
 
 ```js
 {
-  modules: ['@nuxtjs/yandex-metrika'],
+  modules: ['@ruvents/yandex-metrika'],
   yandexMetrika: {
     id: 'XXXXXX',
     // ...
@@ -58,7 +58,7 @@ In Nuxt 2.13+, you can also use public runtime config:
 
 ```js
 {
-  modules: ['@nuxtjs/yandex-metrika'],
+  modules: ['@ruvents/yandex-metrika'],
   publicRuntimeConfig: {
     yandexMetrika: {
       id: process.env.YANDEX_METRIKA_ID,
@@ -92,6 +92,12 @@ Load metrika script from <https://cdn.jsdelivr.net/npm/yandex-metrica-watch/watc
 
 This option can not be provided via runtime config.
 
+### `queryFilter` 
+
+- Default: `undefined`
+
+Array of keys which must be excluded in queries.
+
 ### `accurateTrackBounce`
 ### `childIframe`
 ### `clickmap`
@@ -106,3 +112,7 @@ This option can not be provided via runtime config.
 ### `ut`
 ### `webvisor`
 ### `triggerEvent`
+
+
+
+
