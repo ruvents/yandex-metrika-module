@@ -1,4 +1,3 @@
-import qs from 'qs'
 export default ({ app: { router }, $config }) => {
 
   const { useRuntimeConfig, metrikaUrl, ...options } = <%= serialize(options) %>
@@ -42,8 +41,8 @@ export default ({ app: { router }, $config }) => {
       ym(id, "init", metrikaOptions)
     }
     router.afterEach((to, from) => {
-    const toFullPathWithoutQuery = getPathWithoutQueryByFilter(to, metrikaOptions.queryFiler)
-    const fromFullPathWithoutQuery = getPathWithoutQueryByFilter(from, metrikaOptions.queryFiler)
+      const toFullPathWithoutQuery = getPathWithoutQueryByFilter(to, metrikaOptions.queryFiler)
+      const fromFullPathWithoutQuery = getPathWithoutQueryByFilter(from, metrikaOptions.queryFiler)
   
       ym(id, 'hit', basePath + toFullPathWithoutQuery ? toFullPathWithoutQuery : to.fullPath, {
         referer: basePath + fromFullPathWithoutQuery ? fromFullPathWithoutQuery : from.fullPath
